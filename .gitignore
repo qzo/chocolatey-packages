@@ -1,0 +1,8 @@
+# Vim swap and backup / undo files
+
+*.sw?
+*~
+
+# Built packages
+
+*.nupkg
