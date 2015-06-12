@@ -5,13 +5,17 @@
 
 IF "%1"=="" (
     ECHO You must supply a package name
-    EXIT /B 0
+    EXIT /B 1
 )
 
 SET PackageDir=%~dp0%1
 SET StartDir=%cd%
 
 CD /D %PackageDir%
+IF ERRORLEVEL 1 (
+    ECHO The package directory doesn't exist
+    EXIT /B 1
+)
 
 ECHO Checking for Vim swap files... & @ECHO.
 DIR *.sw? /B/S /AH
