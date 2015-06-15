@@ -8,9 +8,9 @@
     <version>1.0.094</version>
     <authors>byuu et al.</authors>
     <owners>qzo</owners>
-    <summary>higan is a Nintendo multi-system emulator.</summary>
+    <summary>Higan is a Nintendo multi-system emulator.</summary>
     <description>
-higan is a Nintendo multi-system emulator that began development on 2014-10-14. It currently supports the following systems: Famicom, Super Famicom, Game Boy, Game Boy Color, Game Boy Advance. higan also supports the following subsystems: Super Game Boy, BS-X Satellaview, Sufami Turbo.
+Higan is a Nintendo multi-system emulator that began development on 2014-10-14. It currently supports the following systems: Famicom, Super Famicom, Game Boy, Game Boy Color, Game Boy Advance. Higan also supports the following subsystems: Super Game Boy, BS-X Satellaview, Sufami Turbo.
     </description>
     <projectUrl>http://byuu.org/emulation/higan/</projectUrl>
     <tags>higan bsnes emulator emulation games gaming nintendo nes snes famicom super-famicom game-boy game-boy-color game-boy-advance</tags>
