@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>find-and-run-robot.portable</id>
+    <title>Find and Run Robot (Portable)</title>
+    <version>2.223.01</version>
+    <authors>DonationCoder</authors>
+    <owners>qzo</owners>
+    <summary>Find and Run Robot lets you quickly find and launch programs and open documents.</summary>
+    <description>Find and Run Robot (FARR) is a program for keyboard maniacs -- it uses an adaptive "live search" function to rapidly find programs and documents on your computer as you type.
+
+Press your chosen hotkey to display the FARR window, then just start typing the first letters of the application you want to launch and the results appear instantly. Hit enter to launch the top result, or refine your search with special modifiers and commands.
+
+FARR also lets you quickly run web searches, send email, manipulate files, control on-screen windows, and much more. Build and share custom commands or install plugins to add tons of new features, like live search features for your clipboard history and your internet bookmarks; a popup a calculator with history tape and persistant variables; and many more...</description>
+    <projectUrl>http://www.donationcoder.com/Software/Mouser/findrun/</projectUrl>
+    <tags>farr find-and-run-robot productivity launcher</tags>
+    <licenseUrl>http://www.donationcoder.com/Keys/index.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/84db3a1265ad09033f9293161fba7f7d036bb41e/icons/find-and-run-robot.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~" />
+  </files>
+</package>
