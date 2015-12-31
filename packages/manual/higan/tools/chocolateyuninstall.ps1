@@ -1,6 +1,6 @@
 ﻿$packageName = 'higan'
 $fileName32 = 'higan_v094-32bit.7z'
-$fileName64 = 'higan_v094-64bit.7z'
+$fileName64 = 'higan_v096-64bit.7z'
 $fileName = If (Get-ProcessorBits 64) { $fileName64 } Else { $fileName32 }
 $startFolder = $packageName
 
@@ -8,6 +8,7 @@ Function StopProcesses {
     Stop-Process -Name 'higan-accuracy' -ErrorAction SilentlyContinue
     Stop-Process -Name 'higan-balanced' -ErrorAction SilentlyContinue
     Stop-Process -Name 'higan-performance' -ErrorAction SilentlyContinue
+    Stop-Process -Name 'icarus' -ErrorAction SilentlyContinue
 }
 
 Function RemoveStartMenuShortcuts {

@@ -1,15 +1,14 @@
 ﻿$packageName = 'higan'
-$baseUrl = 'http://files.byuu.org/download/'
-$name32 = 'higan_v094-32bit'
-$name64 = 'higan_v094-64bit'
-$dir = If (Get-ProcessorBits 64) { $name64 } Else { $name32 }
-$url = $baseUrl + $name32 + '.7z'
-$url64 = $baseUrl + $name64 + '.7z'
+$dir32 = 'higan_v094-32bit'
+$dir64 = 'higan_v096-64bit'
+$dir = If (Get-ProcessorBits 64) { $dir64 } Else { $dir32 }
+$url32 = 'http://files.byuu.org/download/higan_v094-32bit.7z'
+$url64 = 'http://download.byuu.org/higan_v096-64bit.7z'
 $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$checksum = '16a4703d0d2abbd2f62c0f456cb2a74573c6e63b'
-$checksum64 = 'b525aecd2604dcae5251d51b13d7ceb7f4a32489'
+$checksum32 = '16a4703d0d2abbd2f62c0f456cb2a74573c6e63b'
+$checksum64 = '08608a0b375db1295f26dd9d219f48e9278c343d'
 $checksumType = 'sha1'
-$higanVariants = @('higan-balanced', 'higan-accuracy', 'higan-performance')
+$higanExecutables = @('higan-balanced', 'higan-accuracy', 'higan-performance', 'icarus')
 
 $startFolder = $packageName
 $path = Join-Path -Path $unzipLocation -ChildPath $dir
@@ -20,10 +19,10 @@ Function CreateStartMenuShortcuts {
     $startMenuFolder = New-Item $startMenuFolderPath -Type Directory `
         -ErrorAction SilentlyContinue
     If ($startMenuFolder) {
-        ForEach ($variant in $higanVariants) {
+        ForEach ($executable in $higanExecutables) {
             Install-ChocolateyShortcut -shortcutFilePath `
-                (Join-Path -Path $startMenuFolderPath -ChildPath ($variant + '.lnk')) `
-                -targetPath (Join-Path -Path $path -ChildPath ($variant + '.exe')) `
+                (Join-Path -Path $startMenuFolderPath -ChildPath ($executable + '.lnk')) `
+                -targetPath (Join-Path -Path $path -ChildPath ($executable + '.exe')) `
                 -workingDirectory $path
         }
     } Else {
@@ -33,14 +32,14 @@ Function CreateStartMenuShortcuts {
 
 # SCRIPT STARTS HERE #
 
-ForEach ($variant in $higanVariants) `
-    { Stop-Process -Name $variant -ErrorAction SilentlyContinue }
+ForEach ($executable in $higanExecutables) `
+    { Stop-Process -Name $executable -ErrorAction SilentlyContinue }
 
-Install-ChocolateyZipPackage $packageName $url $unzipLocation $url64 `
-    -checksum $checksum -checksumType $checksumType -checksum64 $checksum64
+Install-ChocolateyZipPackage $packageName $url32 $unzipLocation $url64 `
+    -checksum $checksum32 -checksumType $checksumType -checksum64 $checksum64
 
 # create .gui files
-$higanVariants | ForEach-Object `
+$higanExecutables | ForEach-Object `
     { New-Item -Path $path -Name ($_ + '.exe.gui') -ItemType file }
 
 CreateStartMenuShortcuts
