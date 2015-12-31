@@ -3,7 +3,7 @@
 @REM and build the specified NuGet package using cpack
 @REM
 @REM More packages can be built using one command if they are put in a directory
-@REM whose name ends in "_m" (f.i. "build farr_m)
+@REM whose name ends in "_m" (f.i. "build farr_m")
 
 @ECHO OFF
 
