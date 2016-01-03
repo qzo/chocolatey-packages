@@ -1,13 +1,14 @@
-﻿$packageName = 'higan'
+﻿<?php require '../vars.inc'; ?>
+$packageName = 'higan'
 $dir32 = 'higan_v094-32bit'
-$dir64 = 'higan_v096-64bit'
+$dir64 = '<?php echo DIR64; ?>'
 $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
 $dir = If ($is64) { $dir64 } Else { $dir32 }
 $url32 = 'http://files.byuu.org/download/higan_v094-32bit.7z'
-$url64 = 'http://download.byuu.org/higan_v096-64bit.7z'
+$url64 = '<?php echo URL64; ?>'
 $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $checksum32 = '16a4703d0d2abbd2f62c0f456cb2a74573c6e63b'
-$checksum64 = '08608a0b375db1295f26dd9d219f48e9278c343d'
+$checksum64 = '<?php echo CHECKSUM64; ?>'
 $checksumType = 'sha1'
 $higanExecutables32 = @('higan-balanced', 'higan-accuracy', 'higan-performance')
 $higanExecutables64 = @('higan-balanced', 'higan-accuracy', 'higan-performance', 'icarus')

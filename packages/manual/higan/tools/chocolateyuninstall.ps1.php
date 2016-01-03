@@ -1,6 +1,7 @@
-﻿$packageName = 'higan'
+﻿<?php require '../vars.inc'; ?>
+$packageName = 'higan'
 $fileName32 = 'higan_v094-32bit.7z'
-$fileName64 = 'higan_v096-64bit.7z'
+$fileName64 = '<?php echo FILE_NAME_64; ?>'
 $is64 = (Test-Path -Path (Join-Path -Path $env:chocolateyPackageFolder -ChildPath '64') -PathType Leaf)
 $fileName = If ($is64) { $fileName64 } Else { $fileName32 }
 $startFolder = $packageName

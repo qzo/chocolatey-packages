@@ -1,3 +1,4 @@
+<?php require 'vars.inc'; ?>
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
@@ -5,7 +6,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>higan</id>
     <title>higan</title>
-    <version>1.0.096</version>
+    <version><?php echo VERSION; ?></version>
     <authors>byuu et al.</authors>
     <owners>qzo</owners>
     <summary>Higan is a Nintendo multi-system emulator.</summary>
@@ -20,7 +21,7 @@ Note: The last and final version for 32-bit systems is 1.0.094.
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/bc98320d99aedf6debf9080b6ece383aee36c0ec/icons/higan.png</iconUrl>
     <packageSourceUrl>https://github.com/qzo/chocolatey-packages/tree/master/packages/manual/higan</packageSourceUrl>
-    <projectSourceUrl>http://download.byuu.org/higan_v096-source.7z</projectSourceUrl>
+    <projectSourceUrl><?php echo PROJECT_SOURCE_URL; ?></projectSourceUrl>
     <dependencies>
       <dependency id="chocolatey" version="0.9.9" /> <!-- Install-ChocolateyShortcut required -->
     </dependencies>
