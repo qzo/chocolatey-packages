@@ -6,7 +6,7 @@ $processName = 'vncviewer*'
 $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
 $url32 = '<?php echo URL32; ?>'
 $url64 = '<?php echo URL64; ?>'
-$url = If ($is64) { $url32 } Else { $url64 }
+$url = If ($is64) { $url64 } Else { $url32 }
 $fileName = $url.SubString($url.LastIndexOf('/') + 1)
 $checksum32 = '<?php echo CHECKSUM32; ?>'
 $checksum64 = '<?php echo CHECKSUM64; ?>'
@@ -24,5 +24,8 @@ $startDirItems = @( @{Name = $appName; File = $fileName } )
 Stop-Process -Name $processName -ErrorAction SilentlyContinue
 
 Get-ChocolateyWebFile -packageName $packageName -fileFullPath $fullPath -url $url32 -url64bit $url64 -checksum $checksum32 -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType
+
+# create .gui file
+New-Item -Path $dir -Name ($fileName + '.gui') -ItemType file
 
 Add-StartMenuItem -startDirName $appName -items $startDirItems -appDir $dir
