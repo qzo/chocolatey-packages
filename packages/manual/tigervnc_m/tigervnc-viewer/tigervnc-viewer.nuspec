@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>tigervnc-viewer</id>
+    <title>TigerVNC Viewer</title>
+    <version>1.6.0</version>
+    <authors>TigerVNC Team et al.</authors>
+    <owners>qzo</owners>
+    <summary>TigerVNC is a high-performance, platform-neutral implementation of VNC (Virtual Network Computing), a client/server application that allows users to launch and interact with graphical applications on remote machines.</summary>
+    <description>TigerVNC is a high-performance, platform-neutral implementation of VNC (Virtual Network Computing), a client/server application that allows users to launch and interact with graphical applications on remote machines. TigerVNC provides the levels of performance necessary to run 3D and video applications, and it attempts to maintain a common look and feel and re-use components, where possible, across the various platforms that it supports. TigerVNC also provides extensions for advanced authentication methods and TLS encryption.</description>
+    <projectUrl>http://tigervnc.org/</projectUrl>
+    <tags>vnc remote control admin admin</tags>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/6855e891ea4e897729b4d5d5a17787e3afaa4b0d/icons/tigervnc.png</iconUrl>
+    <releaseNotes>https://github.com/TigerVNC/tigervnc/releases/tag/v1.6.0</releaseNotes>
+    <packageSourceUrl>https://github.com/qzo/chocolatey-packages/tree/master/packages/manual/tigervnc_m/tigervnc-viewer</packageSourceUrl>
+    <projectSourceUrl>https://github.com/TigerVNC/tigervnc</projectSourceUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/tigervnc-users</mailingListUrl>
+  </metadata>
+  <files>
+    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~;**\*.php" />
+  </files>
+</package>
