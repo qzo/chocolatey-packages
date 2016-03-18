@@ -14,9 +14,8 @@ $processName = '<?php echo PROCESS_NAME; ?>'
 Function CreateStartMenuShortcut {
     $startMenuFolderPath = Join-Path -Path ([Environment]::GetFolderPath('Programs')) `
         -ChildPath $startFolder
-    $startMenuFolder = New-Item $startMenuFolderPath -Type Directory `
-        -ErrorAction SilentlyContinue
-    If ($startMenuFolder) {
+    New-Item $startMenuFolderPath -Type Directory -ErrorAction SilentlyContinue
+    If (Test-Path -Path $startMenuFolderPath -PathType Container) {
             Install-ChocolateyShortcut -shortcutFilePath `
                 (Join-Path -Path $startMenuFolderPath -ChildPath ($appName + '.lnk')) `
                 -targetPath $fullPath -workingDirectory $dir

@@ -1,10 +1,10 @@
 ﻿$packageName = 'winbox'
 $appName = 'WinBox'
-$url = 'http://download2.mikrotik.com/routeros/winbox/3.1/winbox.exe'
+$url = 'http://download2.mikrotik.com/routeros/winbox/3.3/winbox.exe'
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $exe = $packageName + '.exe'
 $fullPath = Join-Path -Path $dir -ChildPath $exe
-$checksum = '7670a4d4b07bc8597b0365a8c2f2c1584724e89e'
+$checksum = '2023fa2734b9c56eeefda4534c7872ac7d79e148'
 $checksumType = 'sha1'
 
 $startFolder = $appName
@@ -13,9 +13,8 @@ $processName = 'winbox'
 Function CreateStartMenuShortcut {
     $startMenuFolderPath = Join-Path -Path ([Environment]::GetFolderPath('Programs')) `
         -ChildPath $startFolder
-    $startMenuFolder = New-Item $startMenuFolderPath -Type Directory `
-        -ErrorAction SilentlyContinue
-    If ($startMenuFolder) {
+    New-Item $startMenuFolderPath -Type Directory -ErrorAction SilentlyContinue
+    If (Test-Path -Path $startMenuFolderPath -PathType Container) {
             Install-ChocolateyShortcut -shortcutFilePath `
                 (Join-Path -Path $startMenuFolderPath -ChildPath ($appName + '.lnk')) `
                 -targetPath $fullPath -workingDirectory $dir
