@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>autover</id>
     <title>AutoVer</title>
-    <version>2.2.1</version>
+    <version>2.2.1.20160814</version>
     <authors>Hunter Beanland</authors>
     <owners>qzo</owners>
     <summary>AutoVer is a configurable automatic or real time backup and personal versioning system.</summary>
