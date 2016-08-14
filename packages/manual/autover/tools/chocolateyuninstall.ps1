@@ -20,7 +20,7 @@ If ($uninstallerPath) {
     $processName = $packageName
     Stop-Process -Name $processName -ErrorAction SilentlyContinue
 
-    Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $uninstallerPath
+    Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $uninstallerPath.Replace('"', '')
 }
 Else
 {
