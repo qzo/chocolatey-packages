@@ -3,6 +3,8 @@ $installerType = 'exe'
 $url = 'http://beanland.net.au/autover/AutoVer-setup.exe'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
+$checksum = '732aebe6b33a043888158fec5b473be37cb57da1'
+$checksumType = 'sha1'
 
 $serviceName = 'AutoVerService'
 $running = 'Running'
@@ -45,7 +47,7 @@ Function AutoVerStartService {
 $serviceStopped = AutoVerStop
 
 Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" `
-    -validExitCodes $validExitCodes
+    -validExitCodes $validExitCodes -Checksum $checksum -ChecksumType $checksumType
 
 If ($serviceStopped) {
     AutoVerStartService
