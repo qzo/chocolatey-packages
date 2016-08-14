@@ -6,3 +6,5 @@ $processName = 'FindAndRunRobot'
 Stop-Process -Name $processName -ErrorAction SilentlyContinue
 
 Install-ChocolateyZipPackage $packageName $url $unzipLocation
+
+New-Item -Path $unzipLocation -Name ($processName + '.exe.gui') -ItemType file
