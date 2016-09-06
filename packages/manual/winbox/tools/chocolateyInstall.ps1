@@ -1,10 +1,10 @@
 ﻿$packageName = 'winbox'
 $appName = 'WinBox'
-$url = 'http://download2.mikrotik.com/routeros/winbox/3.4/winbox.exe'
+$url = 'http://download2.mikrotik.com/routeros/winbox/3.5/winbox.exe'
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $exe = $packageName + '.exe'
 $fullPath = Join-Path -Path $dir -ChildPath $exe
-$checksum = '9f58bcd67e1792334657c5e4f4417ef5e0c18491'
+$checksum = 'fe3b2ab065fddac47370fc1200b3a842f47c1dc0'
 $checksumType = 'sha1'
 
 $startFolder = $appName
