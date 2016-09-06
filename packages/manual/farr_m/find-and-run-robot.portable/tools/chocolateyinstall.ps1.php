@@ -1,7 +1,8 @@
-﻿$packageName = 'find-and-run-robot.portable'
+﻿<?php require '../../checksums.inc'; ?>
+$packageName = 'find-and-run-robot.portable'
 $url = 'http://www.donationcoder.com/Software/Mouser/findrun/downloads/FindAndRunRobotPortable.zip'
-$checksum = '1b2e460710aaaefebaa56ffa922e7b428300fa3a'
-$checksumType = 'sha1'
+$checksum = '<?php echo CHECKSUM_PORTABLE; ?>'
+$checksumType = '<?php echo CHECKSUM_TYPE; ?>'
 $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $processName = 'FindAndRunRobot'
 

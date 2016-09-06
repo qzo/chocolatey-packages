@@ -22,6 +22,6 @@
     <mailingListUrl><?php echo MAILING_LIST_URL; ?></mailingListUrl>
   </metadata>
   <files>
-    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~" />
+    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~;**\*.php" />
   </files>
 </package>

@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>find-and-run-robot.install</id>
     <title>Find and Run Robot (Install)</title>
-    <version>2.226.01</version>
+    <version>2.226.01.20160814</version>
     <authors>DonationCoder</authors>
     <owners>qzo</owners>
     <summary>Find and Run Robot lets you quickly find and launch programs and open documents.</summary>
@@ -25,6 +25,6 @@ FARR also lets you quickly run web searches, send email, manipulate files, contr
     <mailingListUrl>http://www.donationcoder.com/forum/index.php?board=12.0</mailingListUrl>
   </metadata>
   <files>
-    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~" />
+    <file src="tools\*.*" target="tools" exclude="**\*.swp;**\*~;**\*.php" />
   </files>
 </package>
