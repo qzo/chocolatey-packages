@@ -28,6 +28,9 @@ Function CreateStartMenuShortcut {
 
 Stop-Process -Name $processName -ErrorAction SilentlyContinue
 
+# Workaround for https://github.com/chocolatey/choco/issues/952
+Remove-Item -Path $fullPath -Force -Confirm:$FALSE -ErrorAction SilentlyContinue
+
 Get-ChocolateyWebFile -packageName $packageName -fileFullPath $fullPath -url $url -checksum $checksum -checksumType $checksumType
 
 # create .gui file
