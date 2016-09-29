@@ -3,12 +3,12 @@ $appName = 'TigerVNC Viewer'
 $processName = 'vncviewer*'
 
 $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
-$url32 = 'https://bintray.com/artifact/download/tigervnc/stable/vncviewer-1.6.0.exe'
-$url64 = 'https://bintray.com/artifact/download/tigervnc/stable/vncviewer64-1.6.0.exe'
+$url32 = 'https://bintray.com/artifact/download/tigervnc/stable/vncviewer-1.7.0.exe'
+$url64 = 'https://bintray.com/artifact/download/tigervnc/stable/vncviewer64-1.7.0.exe'
 $url = If ($is64) { $url64 } Else { $url32 }
 $fileName = $url.SubString($url.LastIndexOf('/') + 1)
-$checksum32 = '32fcbe46c1170d3ad0e84d4c425f558023dd0f54'
-$checksum64 = '3d9ea1ecd9c3686dcfdef80acdf1f290988859a7'
+$checksum32 = 'cc3c45b3a74a6332dda791b15f5b38c73a5c5093'
+$checksum64 = 'bb6e30a2eb45402611ae1ea2a9d549394a382661'
 $checksumType = 'sha1'
 
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
@@ -41,6 +41,31 @@ function Add-StartMenuItem {
 
 }
 
+function Remove-StartMenuItem {
+
+    Param(
+      [string]$startDirName
+    )
+
+    $startMenuDirPath = Join-Path -Path ([Environment]::GetFolderPath('Programs')) `
+        -ChildPath $startDirName
+    Remove-Item -Path $startMenuDirPath -Recurse -Force -Confirm:$FALSE -ErrorAction SilentlyContinue
+
+}
+
+function Set-StartMenuItem {
+
+    Param(
+      [string]$startDirName,
+      [array]$items,
+      [string]$appDir
+    )
+
+    Remove-StartMenuItem -startDirName $startDirName
+    Add-StartMenuItem -startDirName $startDirName -items $items -appDir $appDir
+
+}
+
 # EXECUTION STARTS HERE #
 
 Stop-Process -Name $processName -ErrorAction SilentlyContinue
@@ -50,4 +75,4 @@ Get-ChocolateyWebFile -packageName $packageName -fileFullPath $fullPath -url $ur
 # create .gui file
 New-Item -Path $dir -Name ($fileName + '.gui') -ItemType file
 
-Add-StartMenuItem -startDirName $appName -items $startDirItems -appDir $dir
+Set-StartMenuItem -startDirName $appName -items $startDirItems -appDir $dir

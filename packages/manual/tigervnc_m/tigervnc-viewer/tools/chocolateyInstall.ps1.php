@@ -17,7 +17,7 @@ $fullPath = Join-Path -Path $dir -ChildPath $fileName
 $startDirName = $appName
 $startDirItems = @( @{Name = $appName; File = $fileName } )
 
-<?php require '../../../helpers/Add-StartMenuItem.ps1'; ?>
+<?php require '../../../helpers/Set-StartMenuItem.ps1.php'; ?>
 
 # EXECUTION STARTS HERE #
 
@@ -28,4 +28,4 @@ Get-ChocolateyWebFile -packageName $packageName -fileFullPath $fullPath -url $ur
 # create .gui file
 New-Item -Path $dir -Name ($fileName + '.gui') -ItemType file
 
-Add-StartMenuItem -startDirName $appName -items $startDirItems -appDir $dir
+Set-StartMenuItem -startDirName $appName -items $startDirItems -appDir $dir
