@@ -19,7 +19,7 @@ Note: WinBox is obviously freeware, but no details about the license are availab
     <tags>winbox mikrotik network router routeros administration management</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/6f15cdf317a74ec143a2d6400ad4790b23d54fd8/icons/winbox.png</iconUrl>
-    <releaseNotes>http://wiki.mikrotik.com/wiki/Winbox_changelog</releaseNotes>
+    <releaseNotes>[Winbox changelog](http://wiki.mikrotik.com/wiki/Winbox_changelog)</releaseNotes>
     <packageSourceUrl>https://github.com/qzo/chocolatey-packages/tree/master/packages/manual/winbox</packageSourceUrl>
     <docsUrl>http://wiki.mikrotik.com/wiki/Manual:Winbox</docsUrl>
   </metadata>

@@ -1,8 +1,8 @@
 <?php
 
-define('VERSION', '3.6');
-define('URL', 'http://download2.mikrotik.com/routeros/winbox/3.6/winbox.exe');
-define('CHECKSUM', '6dfee44dde000f218695e6b4ee57d2b01b8797cc');
+define('VERSION', '3.7');
+define('URL', 'http://download2.mikrotik.com/routeros/winbox/3.7/winbox.exe');
+define('CHECKSUM', 'a91dd01f5389cc44d0b4b8b796204f1fbd616d1c');
 
 define('PROCESS_NAME', 'winbox');
 
