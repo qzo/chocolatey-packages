@@ -7,7 +7,7 @@ $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
 $url32 = '<?php echo URL32; ?>'
 $url64 = '<?php echo URL64; ?>'
 $url = If ($is64) { $url64 } Else { $url32 }
-$fileName = $url.SubString($url.LastIndexOf('/') + 1)
+$fileName = $url.SubString($url.LastIndexOf('=') + 1)
 $checksum32 = '<?php echo CHECKSUM32; ?>'
 $checksum64 = '<?php echo CHECKSUM64; ?>'
 $checksumType = 'sha1'
