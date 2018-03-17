@@ -1,6 +1,6 @@
 ﻿$packageName = 'find-and-run-robot.portable'
 $url = 'http://www.donationcoder.com/Software/Mouser/findrun/downloads/FindAndRunRobotPortable.zip'
-$checksum = '041ad88810f461b159b1a38576209ef41a9e2430'
+$checksum = '120429b7858d097094eed720af8ee328e517b9dd'
 $checksumType = 'sha1'
 $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $processName = 'FindAndRunRobot'
