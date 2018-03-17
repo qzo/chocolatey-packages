@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>tigervnc-viewer</id>
     <title>TigerVNC Viewer</title>
-    <version>1.7.1</version>
+    <version>1.8.0</version>
     <authors>TigerVNC Team et al.</authors>
     <owners>qzo</owners>
     <summary>TigerVNC is a high-performance, platform-neutral implementation of VNC (Virtual Network Computing), a client/server application that allows users to launch and interact with graphical applications on remote machines.</summary>
@@ -15,7 +15,7 @@
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/6855e891ea4e897729b4d5d5a17787e3afaa4b0d/icons/tigervnc.png</iconUrl>
-    <releaseNotes>https://github.com/TigerVNC/tigervnc/releases/tag/v1.7.1</releaseNotes>
+    <releaseNotes>https://github.com/TigerVNC/tigervnc/releases/tag/v1.8.0</releaseNotes>
     <packageSourceUrl>https://github.com/qzo/chocolatey-packages/tree/master/packages/manual/tigervnc_m/tigervnc-viewer</packageSourceUrl>
     <projectSourceUrl>https://github.com/TigerVNC/tigervnc</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/tigervnc-users</mailingListUrl>
