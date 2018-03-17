@@ -1,9 +1,9 @@
 <?php
 
-define('VERSION', '3.11');
-define('URL', 'https://download2.mikrotik.com/routeros/winbox/3.11/winbox.exe');
-define('CHECKSUM', '6ef48eca4f0eecbae3607278fb5035634db182ad');
-define('RELEASE_NOTES', 'https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=118408');
+define('VERSION', '3.12');
+define('URL', 'https://download2.mikrotik.com/routeros/winbox/3.12/winbox.exe');
+define('CHECKSUM', '1bd50f3498a91d1542ed16f4f4e2611804974376');
+define('RELEASE_NOTES', 'https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=130319');
 
 define('PROCESS_NAME', 'winbox');
 
