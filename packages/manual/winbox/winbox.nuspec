@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>winbox</id>
     <title>WinBox</title>
-    <version>3.14</version>
+    <version>3.17</version>
     <authors>MikroTik</authors>
     <owners>qzo</owners>
     <summary>WinBox is a small utility that allows administration of Mikrotik RouterOS using a fast and simple GUI.</summary>
@@ -18,7 +18,7 @@ Note: WinBox is obviously freeware, but no details about the license are availab
     <tags>winbox mikrotik network router routeros administration management</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/qzo/chocolatey-packages/6f15cdf317a74ec143a2d6400ad4790b23d54fd8/icons/winbox.png</iconUrl>
-    <releaseNotes>[Winbox changelog](https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=134940)</releaseNotes>
+    <releaseNotes>[Winbox changelog](https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=137745)</releaseNotes>
     <packageSourceUrl>https://github.com/qzo/chocolatey-packages/tree/master/packages/manual/winbox</packageSourceUrl>
     <docsUrl>http://wiki.mikrotik.com/wiki/Manual:Winbox</docsUrl>
   </metadata>
