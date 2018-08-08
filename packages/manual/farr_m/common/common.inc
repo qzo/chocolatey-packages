@@ -1,6 +1,6 @@
 <?php
 
-define('VERSION', '2.233.01');
+define('VERSION', '2.233.02');
 
 define('AUTHORS', 'DonationCoder');
 define('OWNERS', 'qzo');
