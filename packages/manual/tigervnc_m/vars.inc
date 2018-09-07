@@ -1,7 +1,7 @@
 <?php
 
-define('VERSION', '1.8.0');
-define('RELEASE_NOTES', 'https://github.com/TigerVNC/tigervnc/releases/tag/v1.8.0');
+define('VERSION', '1.9.0');
+define('RELEASE_NOTES', 'https://github.com/TigerVNC/tigervnc/releases/tag/v1.9.0');
 
 define('SUMMARY', 'TigerVNC is a high-performance, platform-neutral implementation of VNC (Virtual Network Computing), a client/server application that allows users to launch and interact with graphical applications on remote machines.');
 

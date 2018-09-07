@@ -3,12 +3,12 @@ $appName = 'TigerVNC Viewer'
 $processName = 'vncviewer*'
 
 $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
-$url32 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer-1.8.0.exe'
-$url64 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer64-1.8.0.exe'
+$url32 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer-1.9.0.exe'
+$url64 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer64-1.9.0.exe'
 $url = If ($is64) { $url64 } Else { $url32 }
 $fileName = $url.SubString($url.LastIndexOf('=') + 1)
-$checksum32 = 'b698bbb1427352ec1debe8e24f9ad8aea77f0954'
-$checksum64 = '114f2b2f0b642d50b2e4eca80aeaae9042824961'
+$checksum32 = '8f34d15b07916d80475fff95e04c55f98beefb64'
+$checksum64 = '1380871bb290f3f8b841f1c7df7736b54670703a'
 $checksumType = 'sha1'
 
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
