@@ -3,7 +3,7 @@ $installerType = 'exe'
 $url = 'http://www.donationcoder.com/Software/Mouser/findrun/downloads/FindAndRunRobotSetup.exe'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
-$checksum = '0b9db29f0c5b32d44a5738c16541ed5f7a29ff00'
+$checksum = '4bf4b7ffdd3ed8fabf791354f93d18aae7570298'
 $checksumType = 'sha1'
 
 Install-ChocolateyPackage $packageName $installerType $silentArgs $url `

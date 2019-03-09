@@ -1,7 +1,7 @@
 <?php
 
 define('CHECKSUM_TYPE', 'sha1');
-define('CHECKSUM_INSTALL', '0b9db29f0c5b32d44a5738c16541ed5f7a29ff00');
-define('CHECKSUM_PORTABLE', 'fea48e21e92b7704b23591e960461da9475a4a8b');
+define('CHECKSUM_INSTALL', '4bf4b7ffdd3ed8fabf791354f93d18aae7570298');
+define('CHECKSUM_PORTABLE', '3183e972bf5d22e0051c1c5907aad3dc58206ce4');
 
 ?>
