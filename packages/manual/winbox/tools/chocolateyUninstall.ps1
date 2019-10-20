@@ -1,4 +1,6 @@
 ﻿$startFolder = 'WinBox'
+$processName32 = 'winbox'
+$processName64 = 'winbox64'
 
 Function RemoveStartMenuShortcut {
     $startMenuFolderPath = Join-Path -Path ([Environment]::GetFolderPath('Programs')) `
@@ -8,5 +10,7 @@ Function RemoveStartMenuShortcut {
 
 # SCRIPT STARTS HERE #
 
-Stop-Process -Name 'winbox' -ErrorAction SilentlyContinue
+Stop-Process -Name $processName32 -ErrorAction SilentlyContinue
+Stop-Process -Name $processName64 -ErrorAction SilentlyContinue
+
 RemoveStartMenuShortcut
