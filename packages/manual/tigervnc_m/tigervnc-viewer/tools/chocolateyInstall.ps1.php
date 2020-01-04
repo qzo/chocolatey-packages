@@ -10,7 +10,7 @@ $url = If ($is64) { $url64 } Else { $url32 }
 $fileName = $url.SubString($url.LastIndexOf('=') + 1)
 $checksum32 = '<?php echo CHECKSUM32; ?>'
 $checksum64 = '<?php echo CHECKSUM64; ?>'
-$checksumType = 'sha1'
+$checksumType = 'sha512'
 
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $fullPath = Join-Path -Path $dir -ChildPath $fileName
