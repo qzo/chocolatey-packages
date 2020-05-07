@@ -9,8 +9,8 @@ $processName64 = 'winbox64'
 $processName = If ($is64) { $processName64 } Else { $processName32 }
 $exe = $processName + '.exe'
 $fullPath = Join-Path -Path $dir -ChildPath $exe
-$checksum32 = 'ee67364b5231a439e446a46a4d7e5b1795e4c99670364bb35a650928952315c6c6ca0574e7d8d3608ae5024aa6b483125613ae397c26d955bee1c779ef870bde'
-$checksum64 = 'd939903dd5e9b4595c9a6f72abf5ef5485e6e522737cf22d8aff8f4770f480fa1511c85a441a1080a5f0d309e1657c3717c7d91ece6a38b5f82c803be919eec9'
+$checksum32 = 'dabdcf402c64797b7b61f22e43aefe748016e0659497bc780944a934180091d22884fb83bbea1ca8a0a40cad8518cfb4b151f1afa18472cb57dc7d72eadc3142'
+$checksum64 = 'a51e79a922107ea137c9b41912465e34870e4f7df049d3180d9620d6bec3de099e2faa4f523fba26d6ee592349d83b0db232c240eb5ac41ec0cd1e0e007ec0e1'
 $checksumType = 'sha512'
 
 $startFolder = $appName
