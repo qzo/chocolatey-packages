@@ -1,12 +1,12 @@
 <?php
 
-define('VERSION', '3.24');
+define('VERSION', '3.27');
 define('URL32', 'https://mt.lv/winbox');
 define('URL64', 'https://mt.lv/winbox64');
 // SHA512
-define('CHECKSUM32', 'aa055049f5306bf8c29dbf523ccfd5b316f6864ba78e877639459ffd5d3b82dd62794278676803fcb7b04d3dc8f95f65697705216d11820ae162169d1078fa7b');
-define('CHECKSUM64', '90f58ebc8d5d2e85df6dafb1b60a2040cf822b698f97ee552ea2b2fd595f7834515e8d288c80aaf1fcb90b734ad900cb6f2b96290edd6c4fab61bbfa9ff1ff0c');
-define('RELEASE_NOTES', 'https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=161320');
+define('CHECKSUM32', 'b9e0f5a8c21ee6b041e461dae27e92ddeea34a71a84c855aac6ae435e8ad4aa0dfcdae8c211637e8bdf64c752d266d935003e9c78aa3efa55a861e0bd8676357');
+define('CHECKSUM64', '01381371f802181e126534510c05ca25e393df7151a4ad3760567c651ac44ec34748c00950f6ec6ee9865ce97195e4cc7f1a55e85a36b54f611dd8c9aae63519');
+define('RELEASE_NOTES', 'https://forum.mikrotik.com/viewtopic.php?f=21&amp;t=165712');
 
 define('PROCESS_NAME32', 'winbox');
 define('PROCESS_NAME64', 'winbox64');
