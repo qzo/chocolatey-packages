@@ -3,12 +3,12 @@ $appName = 'TigerVNC Viewer'
 $processName = 'vncviewer*'
 
 $is64 = ((Get-ProcessorBits 64) -and !$env:chocolateyForceX86)
-$url32 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer-1.10.1.exe'
-$url64 = 'https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer64-1.10.1.exe'
+$url32 = 'https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/vncviewer-1.12.0.exe/download#'
+$url64 = 'https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/vncviewer64-1.12.0.exe/download#'
 $url = If ($is64) { $url64 } Else { $url32 }
-$fileName = $url.SubString($url.LastIndexOf('=') + 1)
-$checksum32 = '93b386bc135ade63d2bec5f5b30c1203e689e5be1fe71fc451505a0e7c4ec46c043c9e8a200257f98ae18a39b676c542b15f0985e0e14bacffc46b1449d95f51'
-$checksum64 = '5ed69fcf2a127324865861a2cdbb37ada1e37edebd8ed36bf4111cba7c9d5e8d4726e202695f242ac67bcc26f1e655fbc98a00bd34e47ed227bf834e8a9db534'
+$fileName = ($url -split '/')[8]
+$checksum32 = '4eeb353b1764ce792a9e92b4cdfa4c64e1139f8c704f854e1fd841fab871ce724720cb55e0fe7af5fb948f01502460244150926ccf6e226d87113235100f0a8b'
+$checksum64 = 'a3e15fc3409c7d8899443a3e09312a47fd750e4547ee3cdaab8c9363a83bd953444ba5461b9a2651d1983c5ce3a38b96688b3c4d5b6bdf276090005f5c6176b6'
 $checksumType = 'sha512'
 
 $dir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
